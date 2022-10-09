@@ -85,3 +85,17 @@ main p {
 #crypto p{
     margin: 0;
 }
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    #timeText {
+        font-size: 4rem;
+    }
+
+    h2 ~ p, #adviceText {
+        text-align: center;
+    }
+}
