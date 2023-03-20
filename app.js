@@ -21,8 +21,7 @@ const greetingText = document.querySelector('.greeting')
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     document.getElementById('timeText').textContent = `${currentTime}`
     let greeting;
-    let currentHour = new Date().getHours()
-    console.log(currentHour)
+    let currentHour = new Date().getHours();
 
     if (currentHour >= 00 && currentHour < 6) {
         greeting = "🌚Take charge of your mornings!!!";
@@ -35,7 +34,6 @@ const greetingText = document.querySelector('.greeting')
     } else {
         greeting = "Good Night😴! Enjoy a cozy night rest!!!";
     } 
-    console.log(greeting)
     greetingText.textContent = greeting;
   
 // The fetch request call to the Coingecko API. This will render only the price updates for Ethereum.    
