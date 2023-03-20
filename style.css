@@ -4,63 +4,101 @@
 
 body {
     margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.container {
     background-size: cover;
+    flex-direction: column;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0px 0px 20px #aaaaaa; 
-    flex-direction: column;
     min-height: 100vh;
-    font-size: 1.2rem;
+    background-color: #3b3b3b;
+    background-blend-mode: overlay;
+    width: 100%;
 }
 
-header, main, 
-footer, body,
-#bitcoin, #weatherInfo {
+header, main, .topInfo,
+footer, .container,
+#bitcoin, #weatherInfo,
+#weather, .livePrice {
     display: flex;
 }
 
 header, footer {
     justify-content: space-between;
-    padding: .5em 1em;
 }
 
-main, footer,
-#bitcoin, #weatherInfo {
+.price {
+    padding: .8em;
+    margin-left: 1em;
+    background-color: rgba(0, 0, 0, 0.512);
+    border-radius: 5px;
+}
+
+.livePrice {
+    margin-top: .5em;
+}
+
+header, footer {
+    padding: 1em .5em;
+    width: 95%;
+    margin: 0 auto;
+}
+
+main, footer, header,
+#bitcoin, #weatherInfo,
+.topInfo {
     align-items: center;
+}
+
+.coinData, .liveUpdates, 
+#weather {
+    width: 30%;
+}
+
+#weather, .liveUpdates {
+    margin-bottom: auto;
+}
+
+#weather {
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 main, footer {
     margin-top: auto;
 }
 
+#bitcoin img {
+    background-color: rgba(255, 255, 255, 0.512);
+    border-radius: 50%;
+}
+
 main {
     flex-direction: column;
     padding: 1em 1em;
     align-self: center;
-    border-bottom: 4px solid white;
 }
 
 h1 {
-    margin: 0;
     font-size: 7rem;
 }
 
 h2 {
     margin-top: 0;
     font-size: 2rem;
-}
-
-#weatherInfo {
-    display: flex;
+    border-bottom: 2px solid white;
 }
 
 .city {
-    text-align: center;
-    margin-top: -1.4em;
+    margin-top: -1.2em;
+    margin-right: 1em;
 }
 
 .temp {
@@ -68,7 +106,6 @@ h2 {
 }
 
 main p {
-    margin: 0;
     line-height: 1.2;
 }
 
@@ -79,16 +116,58 @@ main p {
 }
 
 #bitcoin {
-    margin-bottom: .9em;
+    margin: .5em 0;
 }
 
-#crypto p{
+h5 {
+    margin-bottom: .5em;
+}
+
+#crypto p, main p, h1,
+.livePrice p {
     margin: 0;
 }
 
+input[type=text] {
+    width: 70%;
+}
+
+input, button {
+    padding: .6em;
+    border-radius: 5px;
+    border: 0;
+}
+
+button {
+    width: 25%;
+    padding: .7em;
+    background-color: rgba(0, 0, 0, 0.701);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: rgba(0, 0, 0, 0.226);
+}
+
+#adviceText {
+    width: 40%;
+    text-align: end;
+}
+
 @media (max-width: 600px) {
-    footer {
+    footer, header {
         flex-direction: column;
+    }
+
+    #adviceText, .liveUpdates,
+    .coinData, #weather {
+        width: 100%;
+    }
+
+    #weather {
+        align-items: center;
     }
 
     #timeText {

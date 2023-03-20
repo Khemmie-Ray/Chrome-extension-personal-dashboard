@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momentum Dashboard</title>
+    <title>Personal Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
 <body>
+    <div class="container">
     <header>
-        <div id="crypto">
-            <div id="bitcoin"></div>
+        <div class="coinData">
+            <div id="bitcoin">    
+            </div>
+            <div id="crypto">
+            </div>
+        </div>
+        <div class="liveUpdates">
+            <h5>Get live crypto price updates</h5>
+            <input type="text" placeholder="Crypto coin name" id="Search">
+            <button id="btn">Search</button>
+            <div class="livePrice"></div>
         </div>
         <div id="weather">
         <div id="weatherInfo">
@@ -21,11 +31,13 @@
     <main>
         <h1 id="timeText">11:25</h1>
         <h2>Live life</h2>
-        <p>Know and believe that your dreams are valid, YOU ARE A SUPERSTAR!!!</p>
+        <p class="greeting"></p>
+        <p>Dreams are valid, don't quit on yours.</p>
     </main>
     <footer>
         <p id="author">By: Roberto Nickson</p>
         <p id="adviceText"></p>
     </footer>
+</div>
 </body>
 </html>
